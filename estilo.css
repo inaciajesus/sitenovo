@@ -1,16 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
 
 body {
     margin: 0;
 }
 
 header {
-    font-family: "Fira Sans", sans-serif;
     justify-content: center;
     display: flex;
     align-items: center;
     background: pink;
-    height: 70px;
+    height: 80px;
 }
 
 nav {
@@ -37,7 +35,7 @@ nav a:hover {
 header h1 {
     font-size: 40px;
     color: white;
-    font-family: "Playball", cursive;
+    font-family: 'Times New Roman', Times, serif;
     /*Fonte da letra*/
 }
 
@@ -89,14 +87,14 @@ header h1 {
 
 .btn-hero {
     background-color: rgb(252, 93, 133);
-    padding: 8px 15px;
+    padding: 8px 10px;
     text-decoration: none;
     color: white;
     border-radius: 5px;
     /*cantos arredondados*/
     transition: 0.5s all;
     /*efeito suave do mouse*/
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .btn-hero:hover {
@@ -108,7 +106,7 @@ header h1 {
     width: 27%;
     height: 300px;
     background: rgb(252, 218, 215);
-    margin: 5px;
+    margin: 7px;
     padding: 30px 20px;
     flex-flow: column wrap;
     border-radius: 20pt;

@@ -39,13 +39,14 @@ nav a {
     text-transform: uppercase;
     font-weight: 200px;
     }
-    nav a:hover{
-background-color: pink;
-    }
+    nav a:hover {
+    background-color: rgb(252, 156, 172);
+}
+    
     header h1{
     font-size: 40px;
     color: white;
-    font-family: "Playball", cursive;  /*Fonte da letra*/
+      /*font-family: "Playball", cursive;Fonte da letra*/
 }
     
     .contact-info {
@@ -80,10 +81,13 @@ background-color: pink;
     }
     
     .contact-form {
-      background: rgb(247, 237, 220);
-      padding: 1rem;
+      background: rgb(248, 237, 217);
+      align-items: center;
+      width: 100%;
+      padding: 2rem;
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      
     }
     
     .form-group {
@@ -94,16 +98,27 @@ background-color: pink;
       display: block;
       margin-bottom: 0.5rem;
       color: #666;
+       
     }
     
-    .form-group input,
+      .form-group input,
     .form-group textarea {
-      width: 100%;
+      width: 50%;
       padding: 0.8rem;
       border: 1px solid #ddd;
       border-radius: 5px;
       font-size: 1rem;
     }
+    
+   /* .form-group input,
+    .form-group textarea {
+      width: 50%;
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+      padding-left: 600px;
+    }*/
     
     .form-group textarea {
       height: 150px;
@@ -152,7 +167,7 @@ background-color: pink;
     </head>
     <body>
         <header>
-            <h1>Confeitaria Casa dos Mimos</h1>
+            <h1>Confeitaria Casa dos Mimos 🍩</h1>
      </header>
      <nav>
         <a href="index.html">Início</a>
@@ -197,15 +212,6 @@ background-color: pink;
         <div class="contact-form">
           <h2>Envie uma mensagem</h2>
           <form id="contactForm" onsubmit="return handleSubmit(event)">
-            <div class="form-group">
-              <label for="name">Nome</label>
-              <input type="text" id="name" required>
-            </div>
-    
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" required>
-            </div>
     
             <div class="form-group">
               <label for="subject">Assunto</label>

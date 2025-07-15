@@ -11,13 +11,18 @@
             background-color: white;
         }
         header{
-    font-family: "Fira Sans", sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     justify-content: center;
     display: flex;
     align-items: center;
     background: pink;
     height: 70px;
     color: white;
+}
+header h1{
+    font-size: 40px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
 }
 nav {
     display: flex;
@@ -32,9 +37,9 @@ nav a {
     text-transform: uppercase;
     font-weight: 200px;
     }
-    nav a:hover{
-background-color: pink;
-    }
+    nav a:hover {
+    background-color: rgb(252, 156, 172);
+}
     .btn-hero{
     background-color:  rgb(252, 93, 133);
     padding: 8px 15px;
@@ -48,20 +53,21 @@ background-color: pink;
     background-color: rgb(253, 154, 171);
     font-size: 18px;
 }
-.box-items{
-    width: 27%;
-    height: 300px;
-    background: rgb(252, 218, 225);
+.box-items
+/*{
+    width: 50%;
+    height: 350px;
+    background:pink;
     margin: 5px;
-    padding: 30px 20px;
-    flex-flow: column wrap;
-
+padding: 30px 80px;
     
+    flex-flow: column wrap;
     border-radius: 20pt ;
     font-family: "Playball", cursive;
     color: rgb(252, 83, 111);
     text-align: center;
-}
+     
+}*/
 .circular{
     width: 170px; 
     height: 170px; 
@@ -75,19 +81,16 @@ background-color: pink;
 }
 
 .Especialidades{
-    justify-content: center; 
-    align-items: center; 
-    display: flex;
-    flex-flow: row wrap;
-    width: 80%;
-    margin-left: 10%;
-   
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    scrollbar-width: none;
 }
 footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 80px;
     background: pink;
     height: 100px;
     color: white;
@@ -96,6 +99,8 @@ footer{
 img{
     width: 170px;
     height: 170px;
+    align-items: baseline;
+    
 }
 @media screen and (max-width: 1200px) {
     .hero{
@@ -131,7 +136,7 @@ img{
     </style>
 </head>
 <body>
-    <header><h1>Confeitaria Casa dos Mimos</h1></header>
+    <header><h1>Confeitaria Casa dos Mimos 🍩</h1></header>
     <nav>
         <a href="index.html">Início</a>
         <a href="casa.html"> Serviços</a>
@@ -140,97 +145,98 @@ img{
      </nav> <br><br>
     <h1 style="color: rgb(252, 157, 173); text-align: center;">Acompanhe o produtos disponiveis em nosa loja</h1>
      <section class="Especialidades">
+        
         <div class="box-items" >
             <p>Mini bolo de chocolate</p>
             <p>10.000 kz</p>
-            <div class="circular"><img src="ll.jpg" alt="" id="texto"></div><br>
-            <a href="segundo.htm" class="btn-hero" >Comprar</a>
+            <div class="circular"><img src="img/ll.jpg" alt="" id="texto"></div><br>
+            <a href="comprar.html" class="btn-hero" >Comprar</a>
             </div>
 
         <div class="box-items">
             <p>Bolo de pote com cobertura cremosa</p>
             <p>1.500 kz</p>
-             <div class="circular"><img src="pote2....jpg" alt=""></div><br>
-             <a href="segundo.htm" class="btn-hero" >Comprar</a>
+             <div class="circular"><img src="img/pote2....jpg" alt=""></div><br>
+             <a href="comprar.html" class="btn-hero" >Comprar</a>
             </div>
 
         <div class="box-items">
             <p>Fatia Chocolatudo</p>
             <p>2.500 kz</p>
-            <div class="circular"><img src="chocolate2.jpg" alt=""></div><br>
-            <a href="segundo.htm" class="btn-hero" >Comprar</a>
+            <div class="circular"><img src="img/chocolate2.jpg" alt=""></div><br>
+            <a href="comprar.html" class="btn-hero" >Comprar</a>
         </div>
         <div class="box-items">
             <p>Pudim Família</p>
             <p>18.000 kz</p>
-            <div class="circular"><img src="pudim-3000.jpg" alt=""></div><br>
-            <a href="segundo.htm" class="btn-hero">Comprar</a>
+            <div class="circular"><img src="img/pudim-3000.jpg" alt=""></div><br>
+            <a href="comprar.html" class="btn-hero">Comprar</a>
         </div>
         <div class="box-items">
             <p>Mini Pudim</p>
             <p>1000kz/Unidade</p>
-            <div class="circular"><img src="minipudim.jpg" alt=""></div><br>
-            <a href="segundo.htm" class="btn-hero">Comprar</a>
+            <div class="circular"><img src="img/minipudim.jpg" alt=""></div><br>
+            <a href="comprar.html" class="btn-hero">Comprar</a>
         </div>
         <div class="box-items">
             <p>Torta Com recheio de Crocolate</p>
             <p>15.000 kz</p>
-            <div class="circular"><img src="Torta de Chocolate1.jpg" alt=""></div><br>
-            <a href="segundo.htm" class="btn-hero">Comprar</a>
+            <div class="circular"><img src="img/Torta de Chocolate1.jpg" alt=""></div><br>
+            <a href="comprar.html" class="btn-hero">Comprar</a>
         </div>
         <div class="box-items">
             <p>Chocolatudo com Morango</p>
             <p>30.000 kz</p>
-           <div class="circular"> <img src="mor.jpg" alt=""></div><br>
-            <a href="segundo.htm" class="btn-hero" >Comprar</a>
+           <div class="circular"> <img src="img/mor.jpg" alt=""></div><br>
+            <a href="comprar.html" class="btn-hero" >Comprar</a>
         </div>
         <div class="box-items">
             <p>Bolo vulcação com brigadeiro ninho</p>
             <p>5.000kz / 12 Unidades</p>
-            <div class="circular"><img src="branco1.jpg" alt=""></div><br>
-            <a href="segundo.htm" class="btn-hero" >Comprar</a>
+            <div class="circular"><img src="img/branco1.jpg" alt=""></div><br>
+            <a href="comprar.html" class="btn-hero" >Comprar</a>
         </div>
         <div class="box-items">
             <p>Mini bolo Vulção</p>
             <p>1.500kz / Uma unidade</p>
-           <div class="circular"> <img src="vulção2....jpg" alt=""></div><br>
-            <a href="segundo.htm" class="btn-hero" >Comprar</a>
+           <div class="circular"> <img src="img/vulção2....jpg" alt=""></div><br>
+            <a href="comprar.html" class="btn-hero" >Comprar</a>
         </div>
         <div class="box-items">
             <p>Mini Pudin</p>
             1.000kz / Uma unidade
-            <div class="circular"><img src="kindin2.jpg" alt=""></div><br>
-            <a href="segundo.htm" class="btn-hero" >Comprar</a>
+            <div class="circular"><img src="img/kindin2.jpg" alt=""></div><br>
+            <a href="comprar.html" class="btn-hero" >Comprar</a>
         </div>
         <div class="box-items">
             <p>Biscoitos amanteigados de canela</p>
             <p>2.000kz / 12 Unidades</p>
-           <div class="circular"> <img src="seco2.jpg" alt=""></div><br>
-            <a href="segundo.htm" class="btn-hero" >Comprar</a>
+           <div class="circular"> <img src="img/seco2.jpg" alt=""></div><br>
+            <a href="comprar.html" class="btn-hero" >Comprar</a>
         </div>
         <div class="box-items">
             <p>Fular de carne</p>
             <p>15.500 Kz</p>
-          <div class="circular">  <img src="fular2....jpg" alt=""></div><br>
-            <a href="segundo.htm" class="btn-hero" >Comprar</a>
+          <div class="circular">  <img src="img/fular2....jpg" alt=""></div><br>
+            <a href="comprar.html" class="btn-hero" >Comprar</a>
         </div>
         <div class="box-items">
             <p>Mini pizzas suculentas</p>
             <p>5.000kz / 12 Unidades</p>
-           <div class="circular"> <img src="pizzas2.jpg" alt=""></div><br>
-            <a href="segundo.htm" class="btn-hero" >Comprar</a>
+           <div class="circular"> <img src="img/pizzas2.jpg" alt=""></div><br>
+            <a href="comprar.html" class="btn-hero" >Comprar</a>
         </div>
         <div class="box-items">
             <p>Coxinhas, Rissois</p>
             <p>5.000kz/ 12 Unidades</p>
-           <div class="circular"> <img src="salgado2.jpg" alt=""></div><br>
-            <a href="segundo.htm" class="btn-hero" >Comprar</a>
+           <div class="circular"> <img src="img/salgado2.jpg" alt=""></div><br>
+            <a href="comprar.html" class="btn-hero" >Comprar</a>
         </div>
         <div class="box-items">
             <p>Pão docê de leite</p>
             <p>5.000kz / 12 Unidades</p>
-           <div class="circular"> <img src="pao2.jpg" alt=""></div><br>
-            <a href="segundo.htm" class="btn-hero" >Comprar</a>
+           <div class="circular"> <img src="img/pao2.jpg" alt=""></div><br>
+            <a href="comprar.html" class="btn-hero" >Comprar</a>
         </div>
         
     </section>
