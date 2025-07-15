@@ -1,0 +1,264 @@
+<html>
+    <head>
+    <base href="." />
+    <title>Contatos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="zap2.webp" type="image/x-icon">
+    <title>Contactos</title>
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background: white;
+      color: #333;
+    }
+    
+    header{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background: pink;
+    color: white;
+    height: 70px;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: pink;
+}
+nav a {
+    color: rgb(10, 10, 10);
+    padding: 14px 20px; 
+   text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 200px;
+    }
+    nav a:hover{
+background-color: pink;
+    }
+    header h1{
+    font-size: 40px;
+    color: white;
+    font-family: "Playball", cursive;  /*Fonte da letra*/
+}
+    
+    .contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 4rem;
+      padding-left: 100px;
+    }
+    
+    .contacct-card {
+    background: bisque;
+      padding: 2rem;
+      border-radius: 10px;
+     transition: transform 0.3s ease;
+    }
+    
+    .contact-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .contact-card svg {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 1rem;
+      
+    }
+    
+    .contact-card h3 {
+      margin-bottom: 1rem;
+      color: rgb(250, 159, 174);
+    }
+    
+    .contact-form {
+      background: rgb(247, 237, 220);
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem; /* espaçamento entre os input*/
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #666;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    
+    .form-group textarea {
+      height: 150px;
+      resize: vertical;
+    }
+    
+    button {
+      background: rgb(252, 179, 191);
+      color: rgb(104, 102, 98);
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+     transition: 0.3s ease;
+    }
+    
+    button:hover {
+      background: rgb(253, 144, 162);
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem;
+      }
+      
+      .contact-header h1 {
+        font-size: 2rem;
+      }
+    }
+    footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    background: pink;
+    height: 100px;
+    color: white;
+    font-size: 22px;
+}
+.zap{
+    position: fixed;
+    right: 1px;
+    bottom: 10px;
+}
+    </style>
+    </head>
+    <body>
+        <header>
+            <h1>Confeitaria Casa dos Mimos</h1>
+     </header>
+     <nav>
+        <a href="index.html">Início</a>
+        <a href="casa.html"> Serviços</a>
+        <a href="Prudutos.html">Produtos</a>
+        <a href="index2.html">Contatos</a>
+     </nav> <br><br><br>
+      <picture>
+        <source media="()" srcset="">
+        <img src="" alt="">
+     </picture>
+    
+        <div class="contact-info">
+          <div class="contact-card">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#1a73e8" viewBox="0 0 24 24">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            <h3>Email</h3>
+            <p>Inaciadejesus11@gmail.com</p>
+            <p>confeitariacasadosmimos@gmail.com</p>
+          </div>
+    
+          <div class="contact-card">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#1a73e8" viewBox="0 0 24 24">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+            <h3>Telefone</h3>
+            <p>(+244) 939279017</p>
+            <p>(+244) 936989319</p>
+          </div>
+    
+          <div class="contact-card">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#1a73e8" viewBox="0 0 24 24">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            <h3>Endereço</h3>
+            <p>Luanda / Viana</p>
+            <p>Estalagem, Mirú</p>
+          </div>
+        </div>
+    
+        <div class="contact-form">
+          <h2>Envie uma mensagem</h2>
+          <form id="contactForm" onsubmit="return handleSubmit(event)">
+            <div class="form-group">
+              <label for="name">Nome</label>
+              <input type="text" id="name" required>
+            </div>
+    
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" required>
+            </div>
+    
+            <div class="form-group">
+              <label for="subject">Assunto</label>
+              <input type="text" id="subject" required>
+            </div>
+    
+            <div class="form-group">
+              <label for="message">Mensagem</label>
+              <textarea id="message" required></textarea>
+            </div>
+    
+            <button type="submit">Enviar Mensagem</button>
+          </form>
+        </div>
+      </div>
+      <footer>
+        <p>@Casa doa Mimos. A felicidade está em cada mordida</p>
+    </footer>
+    <div class="zap" >
+        <a target="_blank" href="https://wa.link/39yxd0 ">
+            <img width="50px" src="what.jpg" alt="">
+        </a>
+    
+    <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+    
+      // Aqui você pode adicionar a lógica para enviar o formulário
+      console.log('Formulário enviado:', { name, email, subject, message });
+      
+      // Limpa o formulário
+      event.target.reset();
+      
+      // Mostra mensagem de sucesso
+      alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+      
+      return false;
+    }
+    </script>
+    </body></html>
+
+    
+
+
+
+
+
+
+
+
+   

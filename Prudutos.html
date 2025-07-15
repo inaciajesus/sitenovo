@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="zap2.webp" type="image/x-icon">
+    <title>produto</title>
+    <style>
+        body{
+            margin: 0px;
+            background-color: white;
+        }
+        header{
+    font-family: "Fira Sans", sans-serif;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background: pink;
+    height: 70px;
+    color: white;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: pink;
+}
+nav a {
+    color: rgb(10, 10, 10);
+    padding: 14px 20px; 
+   text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 200px;
+    }
+    nav a:hover{
+background-color: pink;
+    }
+    .btn-hero{
+    background-color:  rgb(252, 93, 133);
+    padding: 8px 15px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px; /*cantos arredondados*/
+    transition: 0.5s all; /*efeito suave do mouse*/
+    margin-bottom: 30px;
+}
+.btn-hero:hover{
+    background-color: rgb(253, 154, 171);
+    font-size: 18px;
+}
+.box-items{
+    width: 27%;
+    height: 300px;
+    background: rgb(252, 218, 225);
+    margin: 5px;
+    padding: 30px 20px;
+    flex-flow: column wrap;
+
+    
+    border-radius: 20pt ;
+    font-family: "Playball", cursive;
+    color: rgb(252, 83, 111);
+    text-align: center;
+}
+.circular{
+    width: 170px; 
+    height: 170px; 
+    border-radius: 50%; 
+     overflow: hidden; 
+     object-fit: cover;
+     margin-left: 20%;
+}
+.texto {
+     border-radius: 100%;
+}
+
+.Especialidades{
+    justify-content: center; 
+    align-items: center; 
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;
+    margin-left: 10%;
+   
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    background: pink;
+    height: 100px;
+    color: white;
+    font-size: 22px;
+}
+img{
+    width: 170px;
+    height: 170px;
+}
+@media screen and (max-width: 1200px) {
+    .hero{
+        flex-direction: column-reverse;
+    }
+    .box-txt{
+        flex-flow: column wrap;
+        width: 100%;
+       padding: 40px 30px;
+        justify-content: center;
+        align-items: center;
+    }
+    .box-txt p{
+        text-align: center;
+    }
+    .box-txt h2{
+        font-size: 60px;
+    }
+    .box-img{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .box-items{
+        width: 90%;
+    }
+    footer{
+        font-size: 18px;
+        text-align: center;
+    }
+    
+}
+    
+    </style>
+</head>
+<body>
+    <header><h1>Confeitaria Casa dos Mimos</h1></header>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="casa.html"> Serviços</a>
+        <a href="Prudutos.html">Produtos</a>
+        <a href="index2.html">Contactos</a>
+     </nav> <br><br>
+    <h1 style="color: rgb(252, 157, 173); text-align: center;">Acompanhe o produtos disponiveis em nosa loja</h1>
+     <section class="Especialidades">
+        <div class="box-items" >
+            <p>Mini bolo de chocolate</p>
+            <p>10.000 kz</p>
+            <div class="circular"><img src="ll.jpg" alt="" id="texto"></div><br>
+            <a href="segundo.htm" class="btn-hero" >Comprar</a>
+            </div>
+
+        <div class="box-items">
+            <p>Bolo de pote com cobertura cremosa</p>
+            <p>1.500 kz</p>
+             <div class="circular"><img src="pote2....jpg" alt=""></div><br>
+             <a href="segundo.htm" class="btn-hero" >Comprar</a>
+            </div>
+
+        <div class="box-items">
+            <p>Fatia Chocolatudo</p>
+            <p>2.500 kz</p>
+            <div class="circular"><img src="chocolate2.jpg" alt=""></div><br>
+            <a href="segundo.htm" class="btn-hero" >Comprar</a>
+        </div>
+        <div class="box-items">
+            <p>Pudim Família</p>
+            <p>18.000 kz</p>
+            <div class="circular"><img src="pudim-3000.jpg" alt=""></div><br>
+            <a href="segundo.htm" class="btn-hero">Comprar</a>
+        </div>
+        <div class="box-items">
+            <p>Mini Pudim</p>
+            <p>1000kz/Unidade</p>
+            <div class="circular"><img src="minipudim.jpg" alt=""></div><br>
+            <a href="segundo.htm" class="btn-hero">Comprar</a>
+        </div>
+        <div class="box-items">
+            <p>Torta Com recheio de Crocolate</p>
+            <p>15.000 kz</p>
+            <div class="circular"><img src="Torta de Chocolate1.jpg" alt=""></div><br>
+            <a href="segundo.htm" class="btn-hero">Comprar</a>
+        </div>
+        <div class="box-items">
+            <p>Chocolatudo com Morango</p>
+            <p>30.000 kz</p>
+           <div class="circular"> <img src="mor.jpg" alt=""></div><br>
+            <a href="segundo.htm" class="btn-hero" >Comprar</a>
+        </div>
+        <div class="box-items">
+            <p>Bolo vulcação com brigadeiro ninho</p>
+            <p>5.000kz / 12 Unidades</p>
+            <div class="circular"><img src="branco1.jpg" alt=""></div><br>
+            <a href="segundo.htm" class="btn-hero" >Comprar</a>
+        </div>
+        <div class="box-items">
+            <p>Mini bolo Vulção</p>
+            <p>1.500kz / Uma unidade</p>
+           <div class="circular"> <img src="vulção2....jpg" alt=""></div><br>
+            <a href="segundo.htm" class="btn-hero" >Comprar</a>
+        </div>
+        <div class="box-items">
+            <p>Mini Pudin</p>
+            1.000kz / Uma unidade
+            <div class="circular"><img src="kindin2.jpg" alt=""></div><br>
+            <a href="segundo.htm" class="btn-hero" >Comprar</a>
+        </div>
+        <div class="box-items">
+            <p>Biscoitos amanteigados de canela</p>
+            <p>2.000kz / 12 Unidades</p>
+           <div class="circular"> <img src="seco2.jpg" alt=""></div><br>
+            <a href="segundo.htm" class="btn-hero" >Comprar</a>
+        </div>
+        <div class="box-items">
+            <p>Fular de carne</p>
+            <p>15.500 Kz</p>
+          <div class="circular">  <img src="fular2....jpg" alt=""></div><br>
+            <a href="segundo.htm" class="btn-hero" >Comprar</a>
+        </div>
+        <div class="box-items">
+            <p>Mini pizzas suculentas</p>
+            <p>5.000kz / 12 Unidades</p>
+           <div class="circular"> <img src="pizzas2.jpg" alt=""></div><br>
+            <a href="segundo.htm" class="btn-hero" >Comprar</a>
+        </div>
+        <div class="box-items">
+            <p>Coxinhas, Rissois</p>
+            <p>5.000kz/ 12 Unidades</p>
+           <div class="circular"> <img src="salgado2.jpg" alt=""></div><br>
+            <a href="segundo.htm" class="btn-hero" >Comprar</a>
+        </div>
+        <div class="box-items">
+            <p>Pão docê de leite</p>
+            <p>5.000kz / 12 Unidades</p>
+           <div class="circular"> <img src="pao2.jpg" alt=""></div><br>
+            <a href="segundo.htm" class="btn-hero" >Comprar</a>
+        </div>
+        
+    </section>
+    <footer>
+        <p>@Casa doa Mimos. A felicidade está em cada mordida</p>
+    </footer>
+        
+    </div>
+</body>
+</html>

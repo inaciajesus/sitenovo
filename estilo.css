@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+
+body {
+    margin: 0;
+}
+
+header {
+    font-family: "Fira Sans", sans-serif;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background: pink;
+    height: 70px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #ffc0cb;
+
+}
+
+nav a {
+    color: rgb(10, 10, 10);
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 200px;
+
+}
+
+nav a:hover {
+    background-color: rgb(252, 156, 172);
+}
+
+header h1 {
+    font-size: 40px;
+    color: white;
+    font-family: "Playball", cursive;
+    /*Fonte da letra*/
+}
+
+.hero {
+    justify-content: center;
+    /* centralizar*/
+    align-items: center;
+    /*Centralixar na perfeição*/
+    display: flex;
+    width: 100%;
+    /* border: 2px solid blue;*/
+}
+
+.box-img {
+    justify-content: center;
+    display: flex;
+    width: 30%;
+    /*border: 2px solid blue;*/
+}
+
+.box-txt {
+    flex-flow: row wrap;
+    /*intercalar os texto, em por cima do outro*/
+    display: flex;
+    width: 40%;
+    /* border: 2px solid rgb(255, 0, 0);*/
+}
+
+.box-txt span {
+    color: gray;
+    letter-spacing: 3px;
+    /*dar espaço entre as letras*/
+    text-transform: uppercase;
+    /*Maiúscula*/
+}
+
+.box-txt h2 {
+    font-size: 60px;
+    color: pink;
+    font-weight: 600px;
+    /*grossura da letra*/
+    margin-top: 30px;
+    /*altura do texto*/
+    margin-bottom: 30px;
+    /*espaçamento entre os textos*/
+    line-height: 50px;
+    /*espaçamento entre as linhas*/
+}
+
+.btn-hero {
+    background-color: rgb(252, 93, 133);
+    padding: 8px 15px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    /*cantos arredondados*/
+    transition: 0.5s all;
+    /*efeito suave do mouse*/
+    margin-bottom: 30px;
+}
+
+.btn-hero:hover {
+    background-color: rgb(253, 154, 171);
+    font-size: 18px;
+}
+
+.box-items {
+    width: 27%;
+    height: 300px;
+    background: rgb(252, 218, 215);
+    margin: 5px;
+    padding: 30px 20px;
+    flex-flow: column wrap;
+    border-radius: 20pt;
+    font-family: "Playball", cursive;
+    color: rgb(252, 83, 111);
+    text-align: center;
+}
+
+.circular {
+    width: 150px;
+    /* Defina a largura desejada */
+    height: 150px;
+    /* Defina a altura desejada */
+    border-radius: 50%;
+    /* Faz a imagem ficar circular */
+    overflow: hidden;
+    /* Garante que a imagem não ultrapasse os limites do contêiner */
+    object-fit: cover;
+    margin-left: 20%;
+}
+
+.texto {
+    border-radius: 100%;
+}
+
+.Especialidades {
+    justify-content: center;
+    /* centralizar*/
+    align-items: center;
+    /* Centralixar na perfeição*/
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;
+    margin-left: 10%;
+
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    background: pink;
+    height: 100px;
+    color: white;
+    font-size: 22px;
+}
+
+.zap {
+    position: fixed;
+    right: 1px;
+    bottom: 10px;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .hero {
+        flex-direction: column-reverse;
+    }
+
+    .box-txt {
+        flex-flow: column wrap;
+        width: 100%;
+        padding: 40px 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box-txt p {
+        text-align: center;
+    }
+
+    .box-txt h2 {
+        font-size: 60px;
+    }
+
+    .box-img {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .box-items {
+        width: 90%;
+    }
+
+    footer {
+        font-size: 18px;
+        text-align: center;
+    }
+
+}
+
+/*
+ body{
+            width: 100pt;
+            height: 100pt;
+            background-image: url('');
+            background-size: 100%;
+            
+*/

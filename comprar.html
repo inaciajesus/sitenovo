@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="zaaa.webp" type="image/x-icon">
+    <title>Comprar</title>
+    <style>
+        body{
+            
+            margin: 0;
+        }
+        
+   header {
+    font-family: "Fira Sans", sans-serif;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background: pink;
+    height: 80px;
+    }
+    header h1{
+    font-size: 40px;
+    color: rgb(252, 249, 250);
+    font-family: "Playball", cursive;
+     }
+     nav {
+    display: flex;
+    justify-content: center;
+    background-color:pink;
+}
+nav a {
+    color: rgb(10, 10, 10);
+    padding: 14px 20px; 
+   text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 200px;
+    }
+    nav a:hover{
+background-color: pink;
+    }
+     section{
+        background: rgb(247, 237, 220);
+        padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .vida{
+        margin-bottom: 1.2rem;
+    }
+    .vida label{
+        display: block;
+      margin-bottom: 0.5rem;
+      color: #666;
+    }
+       .vida input{
+        width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    
+    button {
+      background: rgb(252, 179, 191);
+      color: rgb(104, 102, 98);
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+     /* transition: background 0.3s ease;*/
+    }
+    button:hover {
+      background: rgb(253, 144, 162);
+    }
+    section h1{
+        text-align: center;
+    }
+    footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    background: pink;
+    height: 100px;
+    color: white;
+    font-size: 22px;
+}
+.zap{
+    position: fixed;
+    right: 1px;
+    bottom: 10px;
+}
+
+    </style>
+</head>
+<body>
+   <header>
+    <h1>Caonfeitaria Casa dos Mimos</h1>
+   </header>
+   <nav>
+    <a href="index.html">Início</a>
+    <a href="casa.html"> Serviços</a>
+    <a href="Prudutos.html">Produtos</a>
+    <a href="index2.html">Contatos</a>
+ </nav> <br><br><br>
+   <section class="compra">
+    <h1>Carrinho</h1>
+    <form id="love" onsubmit="return handleSubmit(event)">
+        <div class="vida">
+            <label for="nome">Nome</label>
+           <input type="text" name="nome" id="nome" required>
+           </div>
+       
+           <div class="vida">
+               <label for="produto">Produto</label>
+               <input type="text" name="produto" id="produto" required>
+           </div>
+       
+           <div  class="vida">
+               <label for="Quantidade">Quantidade</label>
+               <input type="number" name="" id="Quantidade" required>
+           </div>
+          <div  class="vida">
+           <label for=" valorpago "> Valor pago</label>
+           <input type="number" name="valorpago" id="valorpago" required>
+          </div>
+          <button type="submit"> Comprar</button>
+          </section>
+          <a href="index.html"></a>
+    </form>
+    <footer>
+        <p>@Casa doa Mimos. A felicidade está em cada mordida</p>
+    </footer>
+    <div class="zap" >
+        <a target="_blank" href="https://wa.link/39yxd0 ">
+            <img width="50px" src="what.jpg" alt="">
+        </a>
+ 
+   <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      
+      const nome = document.getElementById('nome').value;
+      const produto = document.getElementById('produto').value;
+      const Quantidade = document.getElementById('Quantidade').value;
+         const valorpago = document.getElementById('valorpago').value;
+    
+      // Aqui você pode adicionar a lógica para enviar o formulário
+      console.log('Formulário enviado:', { nome, produto, Quantidade, valorpago });
+      
+      // Limpa o formulário
+      event.target.reset();
+      
+      // Mostra mensagem de sucesso
+      alert('O seu pedido foi feito  com sucesso! Entraremos em contato em breve.');
+      
+      return false;
+    }
+    </script>
+    
+  
+</body>
+</html>
