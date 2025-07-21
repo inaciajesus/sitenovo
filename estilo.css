@@ -1,6 +1,8 @@
 
 body {
     margin: 0;
+    font-family: 'Poppins',
+        sans-serif;
 }
 
 header {
@@ -9,6 +11,7 @@ header {
     align-items: center;
     background: pink;
     height: 80px;
+    width: 100%;
 }
 
 nav {
@@ -32,10 +35,12 @@ nav a:hover {
     background-color: rgb(252, 156, 172);
 }
 
+
 header h1 {
     font-size: 40px;
     color: white;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Playfair Display',
+        serif;
     /*Fonte da letra*/
 }
 
@@ -83,6 +88,14 @@ header h1 {
     /*espaçamento entre os textos*/
     line-height: 50px;
     /*espaçamento entre as linhas*/
+}
+p{
+    font-family: 'Open Sans',
+        sans-serif;
+}
+h1{
+    font-family: 'Playfair Display',
+        serif;
 }
 
 .btn-hero {

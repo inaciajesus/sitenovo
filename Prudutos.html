@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="zap2.webp" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <title>produto</title>
     <style>
         body{
             margin: 0px;
             background-color: white;
+            font-family: 'Poppins', sans-serif;
         }
         header{
     font-family: 'Times New Roman', Times, serif;
@@ -40,51 +42,83 @@ nav a {
     nav a:hover {
     background-color: rgb(252, 156, 172);
 }
-    .btn-hero{
-    background-color:  rgb(252, 93, 133);
-    padding: 8px 15px;
-    text-decoration: none;
-    color: white;
-    border-radius: 5px; /*cantos arredondados*/
-    transition: 0.5s all; /*efeito suave do mouse*/
-    margin-bottom: 30px;
+img{
+    width: 170px;
+    height: 170px;
+    align-items: baseline;
+    border-radius: 50%;
+    margin-bottom: 12px; /* Espaço abaixo da imagem */
 }
-.btn-hero:hover{
-    background-color: rgb(253, 154, 171);
-    font-size: 18px;
+h1 h2 h3 h4{
+    font-family: 'Playfair Display', serif;
+    background: rgb(252, 156, 172);
 }
-.box-items
-/*{
-    width: 50%;
-    height: 350px;
-    background:pink;
-    margin: 5px;
-padding: 30px 80px;
-    
-    flex-flow: column wrap;
-    border-radius: 20pt ;
-    font-family: "Playball", cursive;
-    color: rgb(252, 83, 111);
-    text-align: center;
-     
-}*/
-.circular{
-    width: 170px; 
-    height: 170px; 
-    border-radius: 50%; 
-     overflow: hidden; 
-     object-fit: cover;
-     margin-left: 20%;
+p{
+    font-family: 'Open Sans', sans-serif;
 }
-.texto {
-     border-radius: 100%;
+  
+.Especialidades {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #fff8f0;
 }
 
-.Especialidades{
-    display: grid;
-    grid-auto-flow: column;
-    overflow-x: auto;
-    scrollbar-width: none;
+.produto {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 18px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: 0.3s ease;
+}
+.produto:hover{
+     transform: scale(1.05);
+  box-shadow: 0 0 15px #d94f70;
+}
+
+.produto h3 {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  color: #d94f70;
+}
+
+.produto p {
+  font-size: 1em;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.btn-hero {
+     background-color:  #d94f70;
+    font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 12px;
+  padding: 8px 8px;
+   border: none;
+   border-radius: 5px;
+   color: #fff;
+ /* Espaço acima do botão
+  background-color:rgb(252, 93, 133);
+  color: white;
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 12px;  */
+}
+
+.btn-hero:hover {
+    background-color: rgb(253, 154, 171);
 }
 footer{
     display: flex;
@@ -96,43 +130,7 @@ footer{
     color: white;
     font-size: 22px;
 }
-img{
-    width: 170px;
-    height: 170px;
-    align-items: baseline;
-    
-}
-@media screen and (max-width: 1200px) {
-    .hero{
-        flex-direction: column-reverse;
-    }
-    .box-txt{
-        flex-flow: column wrap;
-        width: 100%;
-       padding: 40px 30px;
-        justify-content: center;
-        align-items: center;
-    }
-    .box-txt p{
-        text-align: center;
-    }
-    .box-txt h2{
-        font-size: 60px;
-    }
-    .box-img{
-        width: 100%;
-        margin-bottom: 40px;
-    }
-    .box-items{
-        width: 90%;
-    }
-    footer{
-        font-size: 18px;
-        text-align: center;
-    }
-    
-}
-    
+
     </style>
 </head>
 <body>
@@ -142,103 +140,139 @@ img{
         <a href="casa.html"> Serviços</a>
         <a href="Prudutos.html">Produtos</a>
         <a href="index2.html">Contactos</a>
+        <a href="carrinho.html">Carrinho</a>
      </nav> <br><br>
-    <h1 style="color: rgb(252, 157, 173); text-align: center;">Acompanhe o produtos disponiveis em nosa loja</h1>
+    <h1 style="color: rgb(252, 157, 173); text-align: center;">Acompanhe os produtos disponíveis em nosa loja</h1>
      <section class="Especialidades">
         
-        <div class="box-items" >
-            <p>Mini bolo de chocolate</p>
+        <div class=" produto" data-nome="Mini bolo de chocolate" data-preco="10">
+            <h3>Mini bolo de chocolate</h3>
             <p>10.000 kz</p>
-            <div class="circular"><img src="img/ll.jpg" alt="" id="texto"></div><br>
-            <a href="comprar.html" class="btn-hero" >Comprar</a>
+            <img src="img/ll.jpg" alt="Mini bolo de chocolate" id="texto"><br>
+           <button onclick="adicionarCarrinho(this)" class="btn-hero">Adicionar</button><br><br>
+           <a href="carrinho.html" class="btn-hero">Ver carrinho</a>
             </div>
 
-        <div class="box-items">
-            <p>Bolo de pote com cobertura cremosa</p>
+        <div class=" produto" data-nome=" Bolo de pote" data-preco="10">
+            <h3>Bolo de pote</h3>
             <p>1.500 kz</p>
-             <div class="circular"><img src="img/pote2....jpg" alt=""></div><br>
-             <a href="comprar.html" class="btn-hero" >Comprar</a>
+            <img src="img/pote2....jpg" alt="Bolo de pote"><br>
+             <button onclick="adicionarCarrinho(this)" class="btn-hero">Adicionar</button><br><br>
+             <a href="carrinho.html" class="btn-hero">Ver Carrinho</a>
+
             </div>
 
-        <div class="box-items">
-            <p>Fatia Chocolatudo</p>
+        <div class=" produto" data-nome=" Fatia Chocolatudo" data-preco="10">
+             <h3>Fatia Chocolatudo</h3>
             <p>2.500 kz</p>
-            <div class="circular"><img src="img/chocolate2.jpg" alt=""></div><br>
-            <a href="comprar.html" class="btn-hero" >Comprar</a>
+            <img src="img/chocolate2.jpg" alt="Fatia Chocolatudo"><br>
+            <button onclick="adicionarCarrinho(this)" class="btn-hero">Adicionar</button><br><br>
+            <a href="carrinho.html" class="btn-hero">Ver Carrinho</a>
+
         </div>
-        <div class="box-items">
-            <p>Pudim Família</p>
+        <div class=" produto" data-nome="Pudim Família " data-preco="10">
+            <h3>Pudim Família</h3>
             <p>18.000 kz</p>
-            <div class="circular"><img src="img/pudim-3000.jpg" alt=""></div><br>
-            <a href="comprar.html" class="btn-hero">Comprar</a>
+            <img src="img/pudim-3000.jpg" alt="Pudim Família"><br>
+           <button onclick="adicionarCarrinho(this)" class="btn-hero">Adicionar</button><br><br>
+           <a href="carrinho.html" class="btn-hero">Ver Carrinho</a>
+
         </div>
-        <div class="box-items">
-            <p>Mini Pudim</p>
+        <div class=" produto" data-nome=" Mini Pudim" data-preco="10">
+            <h3>Mini Pudim</h3>
             <p>1000kz/Unidade</p>
-            <div class="circular"><img src="img/minipudim.jpg" alt=""></div><br>
-            <a href="comprar.html" class="btn-hero">Comprar</a>
+            <img src="img/minipudim.jpg" alt="Mini Pudim"><br>
+            <button onclick="adicionarCarrinho(this)" class="btn-hero">Adicionar</button><br><br>
+            <a href="carrinho.html" class="btn-hero">Ver Carrinho</a>
+
         </div>
-        <div class="box-items">
-            <p>Torta Com recheio de Crocolate</p>
+        <div class=" produto" data-nome=" Torta" data-preco="10">
+            <h3>Torta</h3>
             <p>15.000 kz</p>
-            <div class="circular"><img src="img/Torta de Chocolate1.jpg" alt=""></div><br>
-            <a href="comprar.html" class="btn-hero">Comprar</a>
+            <img src="img/Torta de Chocolate1.jpg" alt="Torta"><br>
+            <button onclick="adicionarCarrinho(this)" class="btn-hero">Adicionar</button><br><br>
+            <a href="carrinho.html" class="btn-hero">Ver Carrinho</a>
+
         </div>
-        <div class="box-items">
-            <p>Chocolatudo com Morango</p>
+        <div class=" produto" data-nome=" Chocolatudo com Morango" data-preco="10">
+           <h3>Chocolatudo com Morango</h3>
             <p>30.000 kz</p>
-           <div class="circular"> <img src="img/mor.jpg" alt=""></div><br>
-            <a href="comprar.html" class="btn-hero" >Comprar</a>
+            <img src="img/mor.jpg" alt="Chocolatudo com Morango"><br>
+            <button onclick="adicionarCarrinho(this)" class="btn-hero">Adicionar</button><br><br>
+            <a href="carrinho.html" class="btn-hero">Ver Carrinho</a>
+
         </div>
-        <div class="box-items">
-            <p>Bolo vulcação com brigadeiro ninho</p>
+        <div class=" produto" data-nome=" Bolo vulcação" data-preco="10">
+            <h3>Bolo vulcação</h3>
             <p>5.000kz / 12 Unidades</p>
-            <div class="circular"><img src="img/branco1.jpg" alt=""></div><br>
-            <a href="comprar.html" class="btn-hero" >Comprar</a>
+            <img src="img/branco1.jpg" alt="Bolo vulcação"><br>
+            <button onclick="adicionarCarrinho(this)" class="btn-hero">Adicionar</button><br><br>
+            <a href="carrinho.html" class="btn-hero">Ver Carrinho</a>
+
         </div>
-        <div class="box-items">
-            <p>Mini bolo Vulção</p>
+        <div class=" produto" data-nome="Mini bolo Vulção" data-preco="10">
+            <h3>Mini bolo Vulção</h3>
             <p>1.500kz / Uma unidade</p>
-           <div class="circular"> <img src="img/vulção2....jpg" alt=""></div><br>
-            <a href="comprar.html" class="btn-hero" >Comprar</a>
+            <img src="img/vulção2....jpg" alt="Mini bolo Vulção"><br>
+            <button onclick="adicionarCarrinho(this)" class="btn-hero">Adicionar</button><br><br>
+            <a href="carrinho.html" class="btn-hero">Ver Carrinho</a>
+
         </div>
-        <div class="box-items">
-            <p>Mini Pudin</p>
+        <div class="produto" data-nome=" Mini Pudin" data-preco="10">
+            <h3>Mini Pudin</h3>
             1.000kz / Uma unidade
-            <div class="circular"><img src="img/kindin2.jpg" alt=""></div><br>
-            <a href="comprar.html" class="btn-hero" >Comprar</a>
+             <img src="img/kindin2.jpg" alt="Mini Pudin"> <br>
+            <button onclick="adicionarCarrinho(this)" class="btn-hero">Adicionar</button><br><br>
+            <a href="carrinho.html" class="btn-hero">Ver Carrinho</a>
+
         </div>
-        <div class="box-items">
-            <p>Biscoitos amanteigados de canela</p>
+        <div class=" produto" data-nome="Biscoitos amanteigados" data-preco="10">
+           <h3>Biscoitos amanteigados </h3>
             <p>2.000kz / 12 Unidades</p>
-           <div class="circular"> <img src="img/seco2.jpg" alt=""></div><br>
-            <a href="comprar.html" class="btn-hero" >Comprar</a>
+             <img src="img/seco2.jpg" alt="Biscoitos amanteigados"> <br>
+             <button onclick="adicionarCarrinho(this)" class="btn-hero">Adicionar</button><br><br>
+             <a href="carrinho.html" class="btn-hero">Ver Carrinho</a>
+
         </div>
-        <div class="box-items">
-            <p>Fular de carne</p>
+        <div class="produto" data-nome=" Fular de carne" data-preco="10">
+           <h3>Fular de carne</h3>
             <p>15.500 Kz</p>
-          <div class="circular">  <img src="img/fular2....jpg" alt=""></div><br>
-            <a href="comprar.html" class="btn-hero" >Comprar</a>
+            <img src="img/fular2....jpg" alt="Fular de carne"> <br>
+            <button onclick="adicionarCarrinho(this)" class="btn-hero">Adicionar</button><br><br>
+            <a href="carrinho.html" class="btn-hero">Ver Carrinho</a>
+
         </div>
-        <div class="box-items">
-            <p>Mini pizzas suculentas</p>
+        <div class=" produto" data-nome="Mini pizzas suculentas" data-preco="10">
+           <h3>Mini pizzas suculentas</h3>
             <p>5.000kz / 12 Unidades</p>
-           <div class="circular"> <img src="img/pizzas2.jpg" alt=""></div><br>
-            <a href="comprar.html" class="btn-hero" >Comprar</a>
+            <img src="img/pizzas2.jpg" alt="Mini pizzas suculentas"> <br>
+           <button onclick="adicionarCarrinho(this)" class="btn-hero">Adicionar</button><br><br>
+           <a href="carrinho.html" class="btn-hero">Ver Carrinho</a>
+
         </div>
-        <div class="box-items">
-            <p>Coxinhas, Rissois</p>
+        <div class=" produto" data-nome="Coxinhas, Rissois" data-preco="10">
+           <h3>Coxinhas, Rissois</h3>
             <p>5.000kz/ 12 Unidades</p>
-           <div class="circular"> <img src="img/salgado2.jpg" alt=""></div><br>
-            <a href="comprar.html" class="btn-hero" >Comprar</a>
+             <img src="img/salgado2.jpg" alt="Coxinhas, Rissois"> <br>
+             <button onclick="adicionarCarrinho(this)" class="btn-hero">Adicionar</button><br><br>
+             <a href="carrinho.html" class="btn-hero">Ver Carrinho</a>
+
         </div>
-        <div class="box-items">
-            <p>Pão docê de leite</p>
+        <div class="produto" data-nome="Pão docê de leite" data-preco="10">
+            <h3>Pão docê de leite</h3>
             <p>5.000kz / 12 Unidades</p>
-           <div class="circular"> <img src="img/pao2.jpg" alt=""></div><br>
-            <a href="comprar.html" class="btn-hero" >Comprar</a>
+            <img src="img/pao2.jpg" alt="Pão docê de leite"><br>
+           <button onclick="adicionarCarrinho(this)" class="btn-hero">Adicionar</button><br><br>
+           <a href="carrinho.html" class="btn-hero">Ver Carrinho</a>
+
         </div>
-        
+    </section>
+    <section>
+        <div id="carrinho">
+  <h2>🛒 Seu Pedido:</h2>
+  <div id="resumo"></div>
+ 
+</div>
     </section>
     <footer>
         <p>@Casa doa Mimos. A felicidade está em cada mordida</p>
@@ -246,4 +280,36 @@ img{
         
     </div>
 </body>
+<script>
+    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+function adicionarCarrinho(botao) {
+  const produto = botao.parentElement;
+  const nome = produto.dataset.nome;
+  const preco = Number(produto.dataset.preco);
+  carrinho.push({ nome, preco });
+  localStorage.setItem("carrinho", JSON.stringify(carrinho));
+  atualizarCarrinho();
+}
+
+function atualizarCarrinho() {
+  const resumo = carrinho.map(p => `• ${p.nome} - R$${p.preco},00`).join("<br>");
+  document.getElementById("resumo").innerHTML = resumo;
+}
+
+function limparCarrinho() {
+  carrinho = [];
+  localStorage.removeItem("carrinho");
+  atualizarCarrinho();
+}
+
+function enviarPedido() {
+  let total = carrinho.reduce((acc, p) => acc + p.preco, 0);
+  let texto = carrinho.map(p => `• ${p.nome} - R$${p.preco},00`).join("\n");
+  texto += `\nTotal: R$${total},00`;
+  const mensagem = encodeURIComponent(`Olá! Gostaria de fazer meu pedido:\n${texto}`);
+  window.open(`https://wa.me/939279017?text=${mensagem}`);
+}
+
+</script>
 </html>

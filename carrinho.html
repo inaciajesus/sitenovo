@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Seu Carrinho | Casa dos Mimos</title>
+  <link rel="stylesheet" href="carrinho.css" />
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<style>
+  body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffff;
+  padding: 30px;
+  color: #444;
+  text-align: center;
+}
+h1 {
+  color: pink;
+}
+.carrinho-box {
+  background: #fff8fc;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 10px #ffcde3;
+  margin-bottom: 20px;
+   
+}
+.botoes button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  background: #d94f70;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.botoes a {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #ff69b4;
+}
+
+</style>
+<body>
+  <h1>🛍️ Carrinho de Compras</h1>
+  <div id="resumo" class="carrinho-box"></div>
+
+  <div class="botoes">
+    <button onclick="enviarPedido()">Finalizar pelo WhatsApp</button><br>
+    <button onclick="limparCarrinho()">Limpar Pedido</button>
+    <a href="Prudutos.html" style="font-size: 30px;">⬅️ Voltar ao Catálogo</a>
+  </div>
+
+  <script>
+    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+const formatador = new Intl.NumberFormat("pt-AO", {
+  style: "currency",
+  currency: "AOA"
+});
+
+function mostrarCarrinho() {
+  if (carrinho.length === 0) {
+    document.getElementById("resumo").innerHTML = "🥺 Seu carrinho está vazio.";
+    return;
+  }
+
+  const resumo = carrinho
+    .map(p => `• ${p.nome} - ${formatador.format(p.preco)}`)
+    .join("<br>");
+  
+  document.getElementById("resumo").innerHTML = resumo;
+}
+
+function limparCarrinho() {
+  carrinho = [];
+  localStorage.removeItem("carrinho");
+  mostrarCarrinho();
+}
+
+function enviarPedido() {
+  let total = carrinho.reduce((acc, p) => acc + p.preco, 0);
+
+  let texto = carrinho
+    .map(p => `• ${p.nome} - ${formatador.format(p.preco)}`)
+    .join("\n");
+
+  texto += `\nTotal: ${formatador.format(total)}`;
+
+  const mensagem = encodeURIComponent(`Olá! Gostaria de fazer meu pedido:\n${texto}`);
+  window.open(`https://wa.me/939279017?text=${mensagem}`);
+}
+
+mostrarCarrinho();
+
+  </script>
+</body>
+</html>
