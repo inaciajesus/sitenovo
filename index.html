@@ -12,15 +12,15 @@
 <body>
     <header>
         <h1>Confeitaria Casa dos Mimos 🍩</h1>
-    </header>
-        <nav>
+        <nav id="menu">
         <a href="index.html">Início</a>
        <a href="casa.html"> Serviços</a>
        <a href="Prudutos.html">Produtos</a>
         <a href="index2.html">Contatos</a>
          <a href="carrinho.html">Carrinho</a>
  </nav>
-
+ <div class="menu-icon" onclick="toggleMenu()">☰</div>
+ </header>
     <section class="hero">
         <div class="box-img">
             <img id="nayara" src="img/zap2.webp" alt="">
@@ -111,7 +111,11 @@
         
     </div>
 <script>
-        const nayara = document.getElementById('nayara');
+    function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('show');
+  }
+   /* const nayara = document.getElementById('nayara');
         nayara.addEventListener('mouseover', function(){
             nayara.src = "img/zaaa.webp"
 
@@ -119,7 +123,8 @@
         nayara.addEventListener('mouseout', function(){
             nayara.src = "img/zap2.webp"
 
-        } );
+        } );*/
+
     </script>
     
 </body>

@@ -5,31 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="zap2.webp" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="script .js">
     <title>produto</title>
     <style>
-        body{
-            margin: 0px;
-            background-color: white;
-            font-family: 'Poppins', sans-serif;
-        }
-        header{
-    font-family: 'Times New Roman', Times, serif;
-    justify-content: center;
+        *{
+    margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+}
+body {
+    background-color: #fff0f5;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+}
+       header {
+    justify-content: space-between;
     display: flex;
     align-items: center;
     background: pink;
-    height: 70px;
-    color: white;
+    height: 80px;
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom: 20px;
 }
 header h1{
     font-size: 40px;
     color: white;
     font-family: 'Times New Roman', Times, serif;
 }
+
 nav {
     display: flex;
-    justify-content: center;
-    background-color: pink;
+    gap: 15px;
 }
 nav a {
     color: rgb(10, 10, 10);
@@ -49,14 +56,21 @@ img{
     border-radius: 50%;
     margin-bottom: 12px; /* Espaço abaixo da imagem */
 }
-h1 h2 h3 h4{
-    font-family: 'Playfair Display', serif;
-    background: rgb(252, 156, 172);
+h2, h3, h4, p {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: clamp(1.2rem, 1vw, 1rem);
 }
 p{
     font-family: 'Open Sans', sans-serif;
 }
-  
+ .menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    display: none;
+} 
 .Especialidades {
   display: flex;
   flex-wrap: wrap;
@@ -103,18 +117,7 @@ p{
    border: none;
    border-radius: 5px;
    color: #fff;
- /* Espaço acima do botão
-  background-color:rgb(252, 93, 133);
-  color: white;
-  padding: 8px 15px;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  margin-top: 12px;  */
+
 }
 
 .btn-hero:hover {
@@ -130,18 +133,48 @@ footer{
     color: white;
     font-size: 22px;
 }
+@media screen and (max-width: 1200px){
+  footer {
+        font-size: 18px;
+        text-align: center;
+    }
+    header h1{
+        font-size: 30px;
+    }
+         nav {
+             display: none;
+             flex-direction: column;
+             background-color: #ffb6c1;
+             position: absolute;
+             top: 60px;
+             right: 20px;
+             padding: 10px;
+             border-radius: 10px;
+         }
+    
+         nav.show {
+             display: flex;
+         }
+    
+         .menu-icon {
+             display: block;
+         }
+}
 
     </style>
 </head>
 <body>
-    <header><h1>Confeitaria Casa dos Mimos 🍩</h1></header>
-    <nav>
+    <header>
+        <h1>Confeitaria Casa dos Mimos 🍩</h1>
+        <nav id="menu">
         <a href="index.html">Início</a>
-        <a href="casa.html"> Serviços</a>
-        <a href="Prudutos.html">Produtos</a>
-        <a href="index2.html">Contactos</a>
-        <a href="carrinho.html">Carrinho</a>
-     </nav> <br><br>
+       <a href="casa.html"> Serviços</a>
+       <a href="Prudutos.html">Produtos</a>
+        <a href="index2.html">Contatos</a>
+         <a href="carrinho.html">Carrinho</a>
+ </nav>
+<div class="menu-icon" onclick="toggleMenu()">☰</div>
+ </header><br><br>
     <h1 style="color: rgb(252, 157, 173); text-align: center;">Acompanhe os produtos disponíveis em nosa loja</h1>
      <section class="Especialidades">
         
@@ -281,6 +314,11 @@ footer{
     </div>
 </body>
 <script>
+     function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('show');
+  };
+
     let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
 function adicionarCarrinho(botao) {
@@ -293,7 +331,7 @@ function adicionarCarrinho(botao) {
 }
 
 function atualizarCarrinho() {
-  const resumo = carrinho.map(p => `• ${p.nome} - R$${p.preco},00`).join("<br>");
+  const resumo = carrinho.map(p => `• ${p.nome} - kz ${p.preco},00`).join("<br>");
   document.getElementById("resumo").innerHTML = resumo;
 }
 
@@ -305,7 +343,7 @@ function limparCarrinho() {
 
 function enviarPedido() {
   let total = carrinho.reduce((acc, p) => acc + p.preco, 0);
-  let texto = carrinho.map(p => `• ${p.nome} - R$${p.preco},00`).join("\n");
+  let texto = carrinho.map(p => `• ${p.nome} - kz ${p.preco},00`).join("\n");
   texto += `\nTotal: R$${total},00`;
   const mensagem = encodeURIComponent(`Olá! Gostaria de fazer meu pedido:\n${texto}`);
   window.open(`https://wa.me/939279017?text=${mensagem}`);

@@ -6,32 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="zap2.webp" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="script .js">
     <title>Contactos</title>
     <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+   *{
+    margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+}
+body {
+    background-color: #fff0f5;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+}
     
-    body {
-      background: white;
-      color: #333;
-      font-family: 'Poppins', sans-serif;
-    }
-    
-    header{
-    justify-content: center;
+    header {
+    justify-content: space-between;
     display: flex;
     align-items: center;
     background: pink;
-    color: white;
-    height: 70px;
+    height: 80px;
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom: 20px;
 }
+
 nav {
     display: flex;
-    justify-content: center;
-    background-color: pink;
+    gap: 15px;
 }
 nav a {
     color: rgb(10, 10, 10);
@@ -44,14 +47,23 @@ nav a {
     nav a:hover {
     background-color: rgb(252, 156, 172);
 }
-
-h1 h2 h3 h4{
-    font-family: 'Playfair Display', serif;
-}
-p{
+ header h1{
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 40px;
+    color: white;
+ }
+h2, h3, h4, p {
     font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: clamp(1.2rem, 1vw, 1rem);
 }
-    
+.menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    display: none;
+}    
     .contact-info {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -142,10 +154,13 @@ p{
       background: rgb(253, 144, 162);
     }
     
-    @media (max-width: 768px) {
+    @media (max-width: 1200px) {
       .container {
         padding: 1rem;
       }
+      header h1{
+        font-size: 30px;
+    }
       
       .contact-header h1 {
         font-size: 2rem;
@@ -166,19 +181,38 @@ p{
     right: 1px;
     bottom: 10px;
 }
+         nav {
+             display: none;
+             flex-direction: column;
+             background-color: #ffb6c1;
+             position: absolute;
+             top: 60px;
+             right: 20px;
+             padding: 10px;
+             border-radius: 10px;
+         }
+    
+         nav.show {
+             display: flex;
+         }
+    
+         .menu-icon {
+             display: block;
+         }
     </style>
     </head>
     <body>
         <header>
-            <h1>Confeitaria Casa dos Mimos 🍩</h1>
-     </header>
-     <nav>
+        <h1>Confeitaria Casa dos Mimos 🍩</h1>
+        <nav id="menu">
         <a href="index.html">Início</a>
-        <a href="casa.html"> Serviços</a>
-        <a href="Prudutos.html">Produtos</a>
+       <a href="casa.html"> Serviços</a>
+       <a href="Prudutos.html">Produtos</a>
         <a href="index2.html">Contatos</a>
-        <a href="carrinho.html">Carrinho</a>
-     </nav> <br><br><br>
+         <a href="carrinho.html">Carrinho</a>
+ </nav>
+ <div class="menu-icon" onclick="toggleMenu()">☰</div>
+ </header> <br><br><br>
       <picture>
         <source media="()" srcset="">
         <img src="" alt="">
@@ -240,6 +274,11 @@ p{
         </a>
     
     <script>
+       function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('show');
+  };
+
     function handleSubmit(event) {
       event.preventDefault();
       
@@ -247,13 +286,10 @@ p{
       const email = document.getElementById('email').value;
       const subject = document.getElementById('subject').value;
       const message = document.getElementById('message').value;
-    
       // Aqui você pode adicionar a lógica para enviar o formulário
       console.log('Formulário enviado:', { name, email, subject, message });
-      
       // Limpa o formulário
       event.target.reset();
-      
       // Mostra mensagem de sucesso
       alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
       

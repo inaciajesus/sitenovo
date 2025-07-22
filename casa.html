@@ -7,25 +7,30 @@
     <title>Serviços</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
-    
-          body{
-            margin: 0;
-            padding: 0;
-    background: white;
-    font-family: 'Poppins', sans-serif;
+          *{
+    margin: 0;
+        padding: 0;
+        box-sizing: border-box;
 }
-header{
-    justify-content: center;
+body {
+    background-color: #fff0f5;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+}
+header {
+    justify-content: space-between;
     display: flex;
     align-items: center;
     background: pink;
-    height: 70px;
-    color: white;
+    height: 80px;
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom: 20px;
 }
+
 nav {
     display: flex;
-    justify-content: center;
-    background-color: pink;
+    gap: 15px;
 }
 nav a {
     color: rgb(10, 10, 10);
@@ -43,17 +48,34 @@ nav a {
       font-size: 40px;
     color: white;
 }
-h1 h2 h3 h4{
-    font-family: 'Playfair Display', serif;
+h1{
+  color: pink;
+}
+p{
+  color:#d94f70;
+}
+
+ h2, h3, h4, p {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: clamp(1.2rem, 1vw, 1rem);
+}
+.menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    display: none;
 }
  .carrosel{
-   width: 800px;
+   width: 700px;
    height: 350px;
     background: rgb(247, 239, 224);
     margin: 20px;
     padding: 30px 20px;
     border-radius: 20pt ;
     transition: 0.3s ease;
+    text-align: center;
 }
 .carrosel:hover{
    transform: scale(1.05);
@@ -63,8 +85,7 @@ h1 h2 h3 h4{
    display: grid;
     grid-auto-flow: column;
     overflow-x: auto;
-    
-   /* scrollbar-width: none;*/
+   scrollbar-width: none;
 }
     footer{
     display: flex;
@@ -76,36 +97,87 @@ h1 h2 h3 h4{
     color: white;
     font-size: 22px;
 }
+@media screen and (max-width: 1200px){
+  footer {
+        font-size: 18px;
+        text-align: center;
+    }
+    header h1{
+        font-size: 30px;
+    }
+         nav {
+             display: none;
+             flex-direction: column;
+             background-color: #ffb6c1;
+             position: absolute;
+             top: 60px;
+             right: 20px;
+             padding: 10px;
+             border-radius: 10px;
+         }
+         .carrosel{
+          width: 350px;
+         }
+    
+         nav.show {
+             display: flex;
+         }
+    
+         .menu-icon {
+             display: block;
+         }
+}
  </style>
 </head>
 <body>
-    <header>
-       <h1> Confeitaria Casa dos Mimos 🍩</h1>
-    </header>
-    <nav>
+     <header>
+        <h1>Confeitaria Casa dos Mimos 🍩</h1>
+        <nav id="menu">
         <a href="index.html">Início</a>
-        <a href="casa.html"> Serviços</a>
-        <a href="Prudutos.html">Produtos</a>
+       <a href="casa.html"> Serviços</a>
+       <a href="Prudutos.html">Produtos</a>
         <a href="index2.html">Contatos</a>
-        <a href="carrinho.html">Carrinho</a>
-       
-     </nav>
+         <a href="carrinho.html">Carrinho</a>
+ </nav>
+<div class="menu-icon" onclick="toggleMenu()">☰</div>
+</button>
+
+ </header>
     
        <div class="texto">
         <h1 style="color: pink; text-align: center;">Nossa loja dispõe a prestacão de serviços para diversos eventos: </h1>
        </div> <br><br>
         <div class="container">
            <div class="cor">
-           <article class="carrosel"></article>
-            <article class="carrosel"></article>
-            <article class="carrosel"></article>
-           <article class="carrosel"></article>
+           <article class="carrosel">
+            <h1>Coffe breake</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et animi officiis, deserunt, impedit quidem illo corrupti commodi voluptate nam vero mollitia libero vel illum. Sunt quo modi voluptatum corrupti voluptas.</p>
+           </article>
+            <article class="carrosel">
+              <h1>Pequenas festividades</h1>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et animi officiis, deserunt, impedit quidem illo corrupti commodi voluptate nam vero mollitia libero vel illum. Sunt quo modi voluptatum corrupti voluptas.</p>
+            </article>
+            <article class="carrosel">
+              <h1>Aniversários</h1>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et animi officiis, deserunt, impedit quidem illo corrupti commodi voluptate nam vero mollitia libero vel illum. Sunt quo modi voluptatum corrupti voluptas.</p>
+            </article>
+           <article class="carrosel">
+            <h1>Casamentos</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et animi officiis, deserunt, impedit quidem illo corrupti commodi voluptate nam vero mollitia libero vel illum. Sunt quo modi voluptatum corrupti voluptas.</p>
+           </article>
            </div>
     </div>
       <footer>
         <p>@Casa doa Mimos. A felicidade está em cada mordida</p>
     </footer>
     </body>
+    <script>
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('show');
+  }
+</script>
+
     </html>
    <!-- <div class="zap" >
         <a target="_blank" href="https://wa.link/39yxd0 ">
