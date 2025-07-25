@@ -23,8 +23,6 @@ Criar uma experiência digital encantadora para amantes da confeitaria, com foco
 - HTML5 & CSS3
 - JavaScript (em breve)
 - Git & GitHub
-- Design responsivo
-- Tipografia e paleta de cores suaves
 
   ## 'Ainda está em desenvolvimento' ##
 
